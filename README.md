@@ -4,10 +4,12 @@ This project is a demo to show how to use Firebase Storage to upload images in F
 
 ## Screenshots
 
-Upload files:
+**Upload files:**
+
 [![Upload Files](doc/images/upload.png)](doc/images/upload.png)
 
 List files:
+
 [![List Files](doc/images/list.png)](doc/images/list.png)
 
 
