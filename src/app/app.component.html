@@ -1,3 +1,25 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">Angular2 Firebase File Upload</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a routerLink="/list" routerLinkActive="active">List Images</a></li>
+            <li><a routerLink="/upload" routerLinkActive="active">Upload Images</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->      
+      </div>
+    </nav>
+
+    <div class="row content">
+
+      <router-outlet></router-outlet>
+
+    </div>
+
+</div>
+
+

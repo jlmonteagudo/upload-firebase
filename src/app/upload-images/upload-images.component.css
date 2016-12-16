@@ -1,0 +1,4 @@
+.drop-zone { border: dotted 3px lightgray; opacity: 0.5; color: #666; text-align: center }
+.file-over { border: dotted 3px dodgerblue; }
+.table { margin-top: 30px; }
+.text-green { color: green }

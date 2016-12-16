@@ -1,0 +1,5 @@
+<div class="masonry">
+   <div class="item" *ngFor="let image of images | async">
+     <img [src]="image.url">
+   </div>
+</div>
