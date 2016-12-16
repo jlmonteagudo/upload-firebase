@@ -23,4 +23,4 @@ This project is a demo to show how to use Firebase Storage to upload images in F
 
 You can see this project running in **Firebase Hosting** in this URL: [https://upload-582a4.firebaseapp.com/](https://upload-582a4.firebaseapp.com/)
 
-If you want to see working the **Firebase Realtime Database** then you can open two different browsers, one with the **List Images** page and the other one with the **Upload Images**. Then you will see that when you upload images they will be displayed automatically in the **list images** page.
+If you want to see working the **Firebase Realtime Database** then you can open two different browsers, one with the **List Images** page and the other one with the **Upload Images** page. Then you will see that when you upload images they will be displayed automatically in the **list images** page.
