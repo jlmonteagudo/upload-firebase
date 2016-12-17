@@ -17,7 +17,7 @@
 
     <h3>Upload Files</h3>
 
-    <button type="button" class="btn btn-success" (click)="uploadImagesToFirebase()" [disabled]="files?.length == 0">
+    <button type="button" class="btn btn-success" (click)="uploadImagesToFirebase()" [disabled]="files?.length == 0 || !isEnabledUpload">
         <span class="glyphicon glyphicon-upload"></span> Upload files to Firebase
     </button>
     <button type="button" class="btn btn-danger" (click)="clearFiles()">

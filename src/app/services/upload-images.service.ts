@@ -24,25 +24,24 @@ export class UploadImagesService {
 
     _.each(files, (item:FileItem) => {
 
-    item.isUploading = true;
-    let uploadTask: firebase.storage.UploadTask = storageRef.child(`${this.IMAGES_FOLDER}/${item.file.name}`).put(item.file);
+      item.isUploading = true;
+      let uploadTask: firebase.storage.UploadTask = storageRef.child(`${this.IMAGES_FOLDER}/${item.file.name}`).put(item.file);
+      
+      uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, 
+        (snapshot) => item.progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100,
+        (error) => {},
+        () => {
+          item.url = uploadTask.snapshot.downloadURL;
+          item.isUploading = false;
+          this.saveImage({ name: item.file.name, url: item.url });
+        }
+      );
     
-    uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, 
-      (snapshot) => item.progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100,
-      (error) => {},
-      () => {
-        item.url = uploadTask.snapshot.downloadURL;
-        item.isUploading = false;
-        this.saveImage({ name: item.file.name, url: item.url });
-      }
-    );
-    
-
-  });
+    });
 
  }
 
- saveImage(image:any) {
+ private saveImage(image:any) {
    this.af.database.list(`/${this.IMAGES_FOLDER}`).push(image);
  }
 
