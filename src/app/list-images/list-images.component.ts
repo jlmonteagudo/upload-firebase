@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { FirebaseListObservable } from 'angularfire2';
+import { UploadImagesService } from '../services/upload-images.service';
 
 
 @Component({
@@ -9,14 +10,11 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class ListImagesComponent {
 
+  private NUMBER_OF_IMAGES: number = 10;
   images: FirebaseListObservable<any[]>;
 
-  constructor(public af: AngularFire) { 
-    this.images = af.database.list('/images', {
-      query: {
-        limitToLast: 10
-      }
-    });
+  constructor(public uploadImagesService: UploadImagesService) { 
+    this.images = uploadImagesService.listLastImages(this.NUMBER_OF_IMAGES);
   }
 
 }

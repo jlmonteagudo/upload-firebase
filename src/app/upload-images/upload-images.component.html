@@ -13,7 +13,6 @@
 
 </div>
 
-
 <div class="col-md-9" style="margin-bottom: 40px">
 
     <h3>Upload Files</h3>
@@ -25,10 +24,7 @@
         <span class="glyphicon glyphicon-trash"></span> Clear files
     </button>
 
-
-
     <table class="table" *ngIf="files.length > 0">
-
         <thead>
             <tr>
                 <th>Name</th>
@@ -36,9 +32,7 @@
                 <th>Progress</th>
             </tr>
         </thead>
-
         <tbody>
-
             <tr *ngFor="let item of files">
                 <td [ngClass]="{'text-green': item.isUploading}"><strong>{{ item?.file?.name }}</strong></td>
                 <td nowrap>{{ item?.file?.size / 1024 / 1024 | number:'.2' }} MB</td>
@@ -48,9 +42,7 @@
                     </div>
                 </td>
             </tr>
-            
         </tbody>
     </table>
-
                       
 </div>

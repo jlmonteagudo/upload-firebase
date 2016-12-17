@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FileItem } from '../directives/file-item';
-import { UploadImagesService } from './upload-images.service';
+import { UploadImagesService } from '../services/upload-images.service';
 
 @Component({
   selector: 'app-upload-images',

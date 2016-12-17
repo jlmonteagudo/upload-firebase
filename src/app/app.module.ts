@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { UploadImagesComponent } from './upload-images/upload-images.component';
 import { ListImagesComponent } from './list-images/list-images.component';
 import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
-import { UploadImagesService } from './upload-images/upload-images.service';
+import { UploadImagesService } from './services/upload-images.service';
 
 const appRoutes: Routes = [
   { path: '', component: ListImagesComponent },
