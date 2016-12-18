@@ -1,6 +1,6 @@
 # UploadFirebase - Project description
 
-This project is a demo to show how to use Firebase Storage to upload images in Firebase and how to use Firebase Realtime Database to see in real time the files that are uploaded.
+This project is an Angular2 demo to show how to use Firebase Storage to upload images in Firebase and how to use Firebase Realtime Database to see in real time the files that are uploaded.
 
 ## Screenshots
 
